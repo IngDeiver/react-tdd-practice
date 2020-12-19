@@ -1,5 +1,5 @@
 import React from 'react'
-import { cleanup, render } from '@testing-library/react'
+import { cleanup, render } from 'test-utils'
 import TaskDetailTemplate from '../../../../components/task/detail/detail-tamplate'
 
 //mocks

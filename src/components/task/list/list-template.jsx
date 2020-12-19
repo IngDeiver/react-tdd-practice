@@ -9,7 +9,7 @@ const TaskListTemplate = (props) => {
     <>
       <h1 data-testid="tasks-list-title" className="mt-4 text-muted text-center">Tasks list</h1>
       {tasks.length > 0 ? (
-        tasks.map(({ taskId }, index) => (
+        tasks.map((taskId , index) => (
           <TaskDetail
             data-testid={`task-${taskId}-item`}
             taskId={taskId}
