@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import "jquery";
+import "popper.js";
+import 'bootstrap/dist/css/bootstrap.css';
+import TasList from "./components/task/list/list-container";
+import TaskForm from "./components/task/form/form-container";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container my-3">
+      <h1 className="text-center">React TDD</h1>
+      <TaskForm />
+      <TasList />
     </div>
   );
-}
-
+};
 export default App;
