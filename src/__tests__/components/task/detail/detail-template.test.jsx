@@ -1,6 +1,6 @@
 import React from 'react'
 import { cleanup, render } from '@testing-library/react'
-import TaskDetailTemplate from '../../../components/task/detail/detail-tamplate'
+import TaskDetailTemplate from '../../../../components/task/detail/detail-tamplate'
 
 //mocks
 let fakeTask = {taskId:22, title: "Fake test 22"}
