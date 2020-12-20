@@ -9,13 +9,14 @@ Only important here are the unit tests, nothing more.
 ### Rendering
 - **Task list component should** render without crash. :heavy_check_mark:
 - **Task list component should** show "empty list" when the list of task list is empty. :heavy_check_mark:
-- **Task list component should** have tasks into DOM when render with tasks array. 
+- **Task list component should** have tasks into DOM when render with tasks array. :heavy_check_mark:
 - **Task form component should** render without crash. :heavy_check_mark:
 - **Task detail component should** render without crash. :heavy_check_mark:
 
 
 ### Interaction
-- **When writen** text into input text of tittle, this should content the value.
+- **should be disabled** the button add when not have text the input of title. :heavy_check_mark:
+- **When writen** text into input text of tittle, this should content the value. :heavy_check_mark:
 - **When clicked** the button what added a new task the DOM should content the new task added.
 - **When clicked** the button what added a new task the input text title should be cleaned.
 - **When clicked** the button what delete a task the DOM not should content the task removed.

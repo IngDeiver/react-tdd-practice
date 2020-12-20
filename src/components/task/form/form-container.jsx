@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import TaskFormTemplate from "./form-template";
 import { addtTaskAction } from '../../../redux/actions/task.action'
-import uid from 'uid'
+import {uid} from 'uid'
 
 const TaskFormContainer = () => {
   const [title, setTitle] = useState("");

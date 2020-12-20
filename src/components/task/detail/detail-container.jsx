@@ -1,8 +1,9 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import TaskDetailTemplate from "./detail-tamplate";
 
 const TaskDetailCotainer = ({ taskId }) => {
-  const task = {taskId};
+  let task = useSelector(state => state.tasks.find(task => task.taskId === taskId))
   const handleRemoveTask = () => {};
 
   return (

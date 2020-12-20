@@ -11,13 +11,13 @@ const TaskListTemplate = (props) => {
       {tasks.length > 0 ? (
         tasks.map((taskId , index) => (
           <TaskDetail
-            data-testid={`task-${taskId}-item`}
+            className="task-item"
             taskId={taskId}
             key={index}
           />
         ))
       ) : (
-        <p data-testid="task-empty-list-message">Empty list</p>
+        <p className="text-center text-muted" data-testid="task-empty-list-message">Empty list</p>
       )}
     </>
   );

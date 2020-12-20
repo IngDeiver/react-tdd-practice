@@ -1,10 +1,14 @@
 import React, { useEffect } from "react";
-import { shallowEqual, useDispatch, useSelector } from "react-redux";
+import {useDispatch, useSelector } from "react-redux";
 import TaskListTemplate from "./list-template";
 import {fetchTasksAction} from '../../../redux/actions/task.action'
+import { createSelector }  from '@reduxjs/toolkit'
 
 const TasksListContainer = () => {
-  const taskIds = useSelector(state => state.tasks.map(task => task.taskId), shallowEqual)
+  const taskIds = useSelector(createSelector(
+    state => state.tasks,
+    tasks => tasks.map(task => task.taskId)
+  ))
   const dispatch = useDispatch()
   useEffect(() => {
     dispatch(fetchTasksAction())
