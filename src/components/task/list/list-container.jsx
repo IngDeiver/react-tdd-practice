@@ -1,23 +1,30 @@
 import React, { useEffect } from "react";
-import {useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import TaskListTemplate from "./list-template";
-import {fetchTasksAction} from '../../../redux/actions/task.action'
-import { createSelector }  from '@reduxjs/toolkit'
+import { createSelector } from "@reduxjs/toolkit";
+import { fetchTasks } from "../../../redux/thunks/task.thunk";
+import { unwrapResult } from "@reduxjs/toolkit";
 
 const TasksListContainer = () => {
-  const taskIds = useSelector(createSelector(
-    state => state.tasks,
-    tasks => tasks.map(task => task.taskId)
-  ))
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
+  const taskIds = useSelector(
+    createSelector(
+      (state) => state.tasks,
+      (tasks) => tasks.map((task) => task.taskId)
+    )
+  );
+  const getTasks = () => {
+    dispatch(fetchTasks())
+      .then(unwrapResult)
+      .then((res) => {})
+      .catch((err) => {});
+  };
   useEffect(() => {
-    dispatch(fetchTasksAction())
-  })
+    getTasks();
+  });
   return (
     <>
-      <TaskListTemplate
-        tasks={taskIds}
-      />
+      <TaskListTemplate tasks={taskIds} />
     </>
   );
 };

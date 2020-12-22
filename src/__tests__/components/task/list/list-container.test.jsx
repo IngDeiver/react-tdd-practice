@@ -1,14 +1,9 @@
 import React from "react";
-import { cleanup, render, store} from 'test-utils'
+import { cleanup, render, store, fetchTasks} from 'test-utils'
 import TaskListContainer from "../../../../components/task/list/list-container";
 
+
 //redux
-import {
-  fetchTasksAction,
-  addtTaskAction,
-  updateTaskAction,
-  removeTaskAction,
-} from "../../../../redux/actions/task.action";
 
 afterEach(() => {
   cleanup()
@@ -21,5 +16,5 @@ it("should render <TaskDetailContainer/>", () => {
 
 it("When Task list component render** should dispatch the action {type:task/fetchTask, payload: null}", () => {
     render(<TaskListContainer />);
-    expect(store.getActions()).toEqual([fetchTasksAction()])
+    expect(store.getActions().map(action => action.type)).toEqual([fetchTasks.pending.type])
 });

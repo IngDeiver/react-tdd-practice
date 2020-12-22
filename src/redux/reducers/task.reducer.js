@@ -1,10 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit'
-
+import {fetchTasks as fetch} from '../thunks/task.thunk'
 
 const taskSlice = createSlice({
     name: 'tasks',
     initialState: [],
-    reducers: {
+    /*reducers: {
       fetchTasks (state, action) {
         return state
       },
@@ -26,6 +26,9 @@ const taskSlice = createSlice({
             }
         })
       }
+    }*/
+    extraReducers: builder => {
+      builder.addCase(fetch.fulfilled, (_, {payload}) => payload)
     }
   })
   
