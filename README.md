@@ -15,13 +15,6 @@ Only important here are the unit tests, nothing more.
 - **Task form component should** render without crash. :heavy_check_mark:
 - **Task detail component should** render without crash. :heavy_check_mark:
 
-### Api service
-- **Should list** tasks when do get request with axios.
-- **Should get** a task added when do post request with axios.
-- **Should get** a task updated when do put request with axios.
-- **Should get** a task removed when do delete request with axios.
-
-## Integration tests
 ### Interaction
 - **should be disabled** the button add when not have text the input of title. :heavy_check_mark:
 - **When writen** text into input text of tittle, this should content the value. :heavy_check_mark:
@@ -31,7 +24,13 @@ Only important here are the unit tests, nothing more.
 - **When clicked** the button what update a task the DOM should have the new values and not have old values.
 - **When the input its emty** the button add should is disabled.
 
+### Api service
+- **Should list** tasks when do get request with axios.
+- **Should get** a task added when do post request with axios.
+- **Should get** a task updated when do put request with axios.
+- **Should get** a task removed when do delete request with axios.
 
+## Integration tests
 ### Redux
 - **When added** a new task should dispatch add task thunk action.
 - **When remove** a task should dispatch the remove task thunk action.
