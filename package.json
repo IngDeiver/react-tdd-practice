@@ -20,7 +20,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts ej,ect",
+    "cypress":"cypress open",
+    "cypress:headless":"cypress run"
   },
   "eslintConfig": {
     "extends": [
@@ -42,13 +44,15 @@
   },
   "devDependencies": {
     "@testing-library/dom": "^7.29.0",
+    "@testing-library/react-hooks": "^3.7.0",
     "@testing-library/user-event": "^12.6.0",
     "bootstrap": "^4.5.3",
+    "cypress": "^6.2.0",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.5",
     "jquery": "^3.5.1",
     "popper.js": "^1.16.1",
-    "react-test-renderer": "^17.0.1",
+    "react-test-renderer": "^16.14.0",
     "redux-mock-store": "^1.5.4"
   }
 }

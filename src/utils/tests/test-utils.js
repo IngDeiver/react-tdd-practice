@@ -12,6 +12,9 @@ import configureStore from 'redux-mock-store'
 import {fetchTasks} from '../../redux/thunks/task.thunk'
 import taskReducer from '../../redux/reducers/task.reducer'
 
+// hooks 
+import useApi from '../../hooks/useApi'
+
 const mockStore = configureStore([thunkMiddleware])
 const store = mockStore({tasks:[{taskId:"id", title:"title"}, {taskId:"id2", title:"title2"}]})
 
@@ -26,5 +29,4 @@ const customRender = (ui, options) =>
 export * from "@testing-library/react";
 
 // override render method
-export { customRender as render, store, list, fetchTasks};
-export {taskReducer as TaskReducer}
+export { customRender as render, store, list, fetchTasks, taskReducer, useApi};

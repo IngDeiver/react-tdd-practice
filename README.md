@@ -41,6 +41,8 @@ Only important here are the unit tests, nothing more.
 - **When call reducer** with action of type update, should return a tasks array with the task updated.
 - **When call reducer** with action of type remove, should return a tasks array with a task substract.
 
+## e2e (end to end)
+
 # For to repply  run:
 > - `first clone this repository`
 > - `npm i`
