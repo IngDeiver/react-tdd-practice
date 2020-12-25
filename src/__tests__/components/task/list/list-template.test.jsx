@@ -1,10 +1,11 @@
 import React from 'react'
-import { cleanup, render, screen } from 'test-utils'
+import { cleanup, render, screen, mockTasks } from 'test-utils'
 import TaskListTemplate from '../../../../components/task/list/list-template'
 
 //mocks
-let mockTaskIds = ["id","id2"]
+let mockTaskIds;
 
+beforeAll(() => {mockTaskIds = mockTasks.map(t => t._id)})
 // life cicle
 afterEach(() => {
     cleanup();

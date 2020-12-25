@@ -1,13 +1,12 @@
 # TDD
 Only important here are the unit tests, nothing more.
 
-## Testing plan before of develop
-
 **Objective**: CRUD of Task list with redux and testing with jest and react-testing-library
 
 ## Screenshot
-![Screenshot](https://firebasestorage.googleapis.com/v0/b/files-service.appspot.com/o/images%2Freact%20tdd.png?alt=media&token=539c21db-9c60-466e-ad0a-2b461f48e09b)
+![Screenshot](https://firebasestorage.googleapis.com/v0/b/files-service.appspot.com/o/images%2Ftdd%20react%20practice.png?alt=media&token=eaa0cd4d-ec4c-4c80-8f8c-f0542e17e2da)
 
+## Testing plan before of develop
 ## Unit tests
 - ### Rendering
 - **Task list component should** render without crash. :heavy_check_mark:
@@ -17,31 +16,31 @@ Only important here are the unit tests, nothing more.
 - **Task form component should** render without crash. :heavy_check_mark:
 - **Task detail component should** render without crash. :heavy_check_mark:
 
+- ### Api tasks service module
+- **Should list** tasks when do get request with axios. :heavy_check_mark:
+- **Should get** a task added when do post request with axios. :heavy_check_mark:
+- **Should get** a task updated when do put request with axios. :heavy_check_mark:
+- **Should get** a task removed when do delete request with axios. :heavy_check_mark:
+
 - ### Interaction
 - **should be disabled** the button add when not have text the input of title. :heavy_check_mark:
 - **When writen** text into input text of tittle, this should content the value. :heavy_check_mark:
-- **When clicked** the button what added a new task the DOM should content the new task added.
-- **When clicked** the button what added a new task the input text title should be cleaned.
-- **When clicked** the button what delete a task the DOM not should content the task removed.
-- **When clicked** the button what update a task the DOM should have the new values and not have old values.
-- **When the input its emty** the button add should is disabled.
-
-- ### Api tasks service module
-- **Should list** tasks when do get request with axios.
-- **Should get** a task added when do post request with axios.
-- **Should get** a task updated when do put request with axios.
-- **Should get** a task removed when do delete request with axios.
+- **When clicked** the button what added a new task the input text title should be cleaned. :heavy_check_mark:
+- **When clicked** the button what update should show form for edit and have the value to edit.
+xx- **When clicked** the button what added a new task the DOM should content the new task added.
+xx- **When clicked** the button what delete a task the DOM not should content the task removed.
+xx- **When clicked** the button what update a task the DOM should have the new values and not have old values.
 
 ## Integration tests
 - ### Redux
-- **When added** a new task should dispatch add task thunk action.
-- **When remove** a task should dispatch the remove task thunk action.
-- **When update** a task should dispatch update task thunk action.
+- **When added** a new task should dispatch add task thunk action. :heavy_check_mark: 
+- **When remove** a task should dispatch the remove task thunk action. :heavy_check_mark:
+- **When update** a task should dispatch update task thunk action. :heavy_check_mark:
 
-- **When call reducer** with action of type fetch, should return a tasks array.
-- **When call reducer** with action of type add, should return a tasks array with a new task added.
-- **When call reducer** with action of type update, should return a tasks array with the task updated.
-- **When call reducer** with action of type remove, should return a tasks array with a task substract.
+- **When call reducer** with action of type fetch, should return a tasks array.  :heavy_check_mark:
+- **When call reducer** with action of type add, should return a tasks array with a new task added. :heavy_check_mark:
+- **When call reducer** with action of type update, should return a tasks array with the task updated. :heavy_check_mark:
+- **When call reducer** with action of type remove, should return a tasks array with a task substract. :heavy_check_mark:
 
 - ### e2e (end to end with cypress)
 
@@ -49,4 +48,5 @@ Only important here are the unit tests, nothing more.
 > - `first clone this repository`
 > - `npm i`
 > - `npm run test`
+> - `npm run cypress or npm run cypress:headless`
 > - `npm start`

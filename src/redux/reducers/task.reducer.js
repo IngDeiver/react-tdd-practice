@@ -1,10 +1,17 @@
-import { createSlice } from '@reduxjs/toolkit'
-import {fetchTasks as fetch} from '../thunks/task.thunk'
+/* eslint-disable no-sequences */
+/* eslint-disable no-unused-expressions */
+import { createSlice } from "@reduxjs/toolkit";
+import {
+  fetchTasks as fetch,
+  addTask as add,
+  updateTask as update,
+  removeTask as remove,
+} from "../thunks/task.thunk";
 
 const taskSlice = createSlice({
-    name: 'tasks',
-    initialState: [],
-    /*reducers: {
+  name: "tasks",
+  initialState: [],
+  /*reducers: {
       fetchTasks (state, action) {
         return state
       },
@@ -27,11 +34,34 @@ const taskSlice = createSlice({
         })
       }
     }*/
-    extraReducers: builder => {
-      builder.addCase(fetch.fulfilled, (_, {payload}) => payload)
-    }
-  })
-  
-  export const { fetchTasks, addtTask, removeTask, updateTask } = taskSlice.actions
-  
-  export default taskSlice.reducer
+  extraReducers: (builder) => {
+    builder.addCase(fetch.fulfilled, (_, { payload }) => payload),
+      builder.addCase(add.fulfilled, (state, { payload }) =>
+        [...state, payload]
+      ),
+      builder.addCase(update.fulfilled, (state, { payload }) => {
+        return state.map((task) => {
+          if (task._id !== payload._id) {
+            return task;
+          }
+
+          return {
+            ...task,
+            title: payload.title,
+          };
+        });
+      }),
+      builder.addCase(remove.fulfilled, (state, { payload }) => {
+        return state.filter((task) => task._id !== payload._id);
+      })
+  },
+});
+
+export const {
+  fetchTasks,
+  addTask,
+  removeTask,
+  updateTask,
+} = taskSlice.actions;
+
+export default taskSlice.reducer;

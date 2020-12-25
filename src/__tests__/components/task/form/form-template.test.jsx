@@ -1,3 +1,4 @@
+import userEvent from "@testing-library/user-event";
 import React from "react";
 import { cleanup, render, screen } from "test-utils";
 import TaskFormTemplate from "../../../../components/task/form/form-template";
@@ -20,9 +21,10 @@ it("should render <TaskFormTemplate/>", () => {
   );
 });
 
-it("When clicked the button what added a new task the input text title should be cleaned", () => {
+it("should be disabled the button add when not have text the input of title", () => {
   render(
     <TaskFormTemplate title="" onChange={mockOnChange} addTask={mockAddTask} />
   );
   expect(screen.getByTestId("btn-add-task").disabled).toBeTruthy();
 });
+

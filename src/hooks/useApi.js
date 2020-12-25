@@ -10,7 +10,6 @@ const useApi = ({uri, method, body={}, headers={'Content-Type':'applicaction/jso
     const get = async () => {
        try {
         const {data} = await axios.get(uri)
-        console.log("--->", data);
         setData(data)
        } catch (error) {
            setError(error.message)
