@@ -7,11 +7,11 @@ Only important here are the unit tests, nothing more.
 - Application
 ![Screenshot](https://firebasestorage.googleapis.com/v0/b/files-service.appspot.com/o/images%2Ftdd%20react%20practice.png?alt=media&token=eaa0cd4d-ec4c-4c80-8f8c-f0542e17e2da)
 
-![Testing]()
 - Test cases
+![Testing]()
 
-![Cypress](https://cypress-io.ghost.io/blog/content/images/2019/05/auto-wait.gif)
 - Cypress
+![Cypress](https://cypress-io.ghost.io/blog/content/images/2019/05/auto-wait.gif)
 
 ## Testing plan before of develop
 ### Rendering
