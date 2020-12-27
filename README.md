@@ -8,7 +8,7 @@ Only important here are the unit tests, nothing more.
 ![Screenshot](https://firebasestorage.googleapis.com/v0/b/files-service.appspot.com/o/images%2Ftdd%20react%20practice.png?alt=media&token=eaa0cd4d-ec4c-4c80-8f8c-f0542e17e2da)
 
 - Test cases
-![Testing]()
+![Testing](https://firebasestorage.googleapis.com/v0/b/files-service.appspot.com/o/images%2FCaptura%20de%20pantalla%20de%202020-12-27%2010-23-53.png?alt=media&token=394909e7-e446-457d-ad9b-6f267d2d30b5)
 
 - Cypress
 ![Cypress](https://cypress-io.ghost.io/blog/content/images/2019/05/auto-wait.gif)
@@ -33,9 +33,6 @@ Only important here are the unit tests, nothing more.
 - **When writen** text into input text of tittle, this should content the value. :heavy_check_mark:
 - **When clicked** the button what added a new task the input text title should be cleaned. :heavy_check_mark:
 - **When clicked** the button what update should show form for edit and have the value to edit.
-xx- **When clicked** the button what added a new task the DOM should content the new task added.
-xx- **When clicked** the button what delete a task the DOM not should content the task removed.
-xx- **When clicked** the button what update a task the DOM should have the new values and not have old values.
 
 ### Redux
 - **When added** a new task should dispatch add task thunk action. :heavy_check_mark: 

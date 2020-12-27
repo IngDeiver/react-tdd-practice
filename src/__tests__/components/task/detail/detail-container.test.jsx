@@ -46,10 +46,9 @@ it("When update a task should dispatch update task thunk action.", async () => {
   userEvent.click(screen.getAllByText("Update")[0]);
 
   const expectActions = updateTask.fulfilled.type;
-  const l =await waitForActions(store, [expectActions], {
+  await waitForActions(store, [expectActions], {
     matcher: matchers.containing,
   });
-console.log(l);
   expect(
     store
       .getActions()

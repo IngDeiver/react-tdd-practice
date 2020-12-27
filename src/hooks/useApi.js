@@ -2,10 +2,10 @@
 import { useEffect, useState } from "react"
 
 import axios from 'axios'
-const useApi = ({uri, method, body={}, headers={'Content-Type':'applicaction/json'}}) => {
-
+const useApi = (uri, method, body={}) => {
     const [data, setData] = useState([])
     const [error, setError] = useState('')
+    const headers={'content-type':'application/json'}
 
     const get = async () => {
        try {
@@ -49,7 +49,7 @@ const useApi = ({uri, method, body={}, headers={'Content-Type':'applicaction/jso
         else if (method === "POST") post();
         else if (method === "PUT") put();
         else if (method === "DELETE") remove();
-    })
+    },[])
 
     return {error, data}
 }

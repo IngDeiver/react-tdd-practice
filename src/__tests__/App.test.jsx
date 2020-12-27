@@ -13,18 +13,17 @@ it('should render <App/>', () => {
     render(<App/>)
 });
 
-it("DOM should content the new task added", async () => {
-    render(<App />);
-    const data = {_id:"id4", title:"Task added"}
-    axios.post.mockResolvedValue({data});
+// it("DOM should content the new task added", async () => {
+//     render(<App />);
+//     const data = {_id:"id4", title:"Task added"}
+//     axios.post.mockResolvedValue({data});
     
-    const d = await store.dispatch(addTask(data))
-    console.log(d);
-    await waitFor(() => {
-        expect(screen.getByText(data.title)).toBeInTheDocument()
-    })
+//     await store.dispatch(addTask(data))
+//     await waitFor(() => {
+//         expect(screen.getByText(data.title)).toBeInTheDocument()
+//     })
       
   
     
-  });
+//   });
   
