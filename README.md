@@ -13,6 +13,8 @@ Only important here are the unit tests, nothing more.
 - Cypress
 ![Cypress](https://cypress-io.ghost.io/blog/content/images/2019/05/auto-wait.gif)
 
+[![react-tdd-redux-practice](https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/detailed/zxx3d7&style=flat&logo=cypress)](https://dashboard.cypress.io/projects/zxx3d7/runs)
+
 ## Testing plan before of develop
 ### Rendering
 - **Task list component should** render without crash. :heavy_check_mark:
@@ -50,5 +52,5 @@ Only important here are the unit tests, nothing more.
 > - `first clone this repository`
 > - `npm i`
 > - `npm run test`
-> - `npm run cypress or npm run cypress:headless`
+> - `npm run cypress:open or npm run cypress:headless`
 > - `npm start`
