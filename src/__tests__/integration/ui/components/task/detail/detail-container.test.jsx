@@ -8,7 +8,7 @@ import {
   removeTask,
   updateTask,
 } from "test-utils";
-import TaskDetailContainer from "../../../../components/task/detail/detail-container";
+import TaskDetailContainer from "../../../../../../components/task/detail/detail-container";
 import axios from "axios";
 import userEvent from "@testing-library/user-event";
 import waitForActions, { matchers } from "redux-mock-store-await-actions";

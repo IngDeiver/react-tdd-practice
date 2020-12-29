@@ -38,7 +38,7 @@ const TaskDetailTemplate = (props) => {
                   Update
                 </button>
                 <button
-                  data-testid="btn-canle-update-task mx-2"
+                  data-testid="btn-cancel-update-task"
                   className="btn btn-sm btn-default mx-2"
                   onClick={() => setUpdate(false)}
                 >

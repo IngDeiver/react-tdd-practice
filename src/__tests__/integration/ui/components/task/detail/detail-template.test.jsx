@@ -1,6 +1,6 @@
 import React from 'react'
 import { cleanup, render, screen } from 'test-utils'
-import TaskDetailTemplate from '../../../../components/task/detail/detail-tamplate'
+import TaskDetailTemplate from '../../../../../../components/task/detail/detail-tamplate'
 import userEvent from "@testing-library/user-event";
 
 //mocks

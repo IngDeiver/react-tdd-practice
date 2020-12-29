@@ -1,7 +1,6 @@
-import userEvent from "@testing-library/user-event";
 import React from "react";
 import { cleanup, render, screen } from "test-utils";
-import TaskFormTemplate from "../../../../components/task/form/form-template";
+import TaskFormTemplate from "../../../../../../components/task/form/form-template";
 
 //mocks
 const mockOnChange = jest.fn();

@@ -1,6 +1,6 @@
 import React from "react";
 import { cleanup, render, store, fetchTasks, mockTasks} from 'test-utils'
-import TaskListContainer from "../../../../components/task/list/list-container";
+import TaskListContainer from "../../../../../../components/task/list/list-container";
 import axios from 'axios';
 
 jest.mock('axios');

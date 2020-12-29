@@ -2,7 +2,7 @@ import React from 'react'
 import { cleanup, render, screen, waitFor, addTask, store } from 'test-utils'
 import userEvent from "@testing-library/user-event";
 import waitForActions, { matchers } from "redux-mock-store-await-actions";
-import App from '../App'
+import App from '../../../../App'
 import axios from "axios";
 
 

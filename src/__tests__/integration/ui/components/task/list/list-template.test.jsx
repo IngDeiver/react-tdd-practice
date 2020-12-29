@@ -1,6 +1,6 @@
 import React from 'react'
 import { cleanup, render, screen, mockTasks } from 'test-utils'
-import TaskListTemplate from '../../../../components/task/list/list-template'
+import TaskListTemplate from '../../../../../../components/task/list/list-template'
 
 //mocks
 let mockTaskIds;

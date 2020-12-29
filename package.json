@@ -20,10 +20,10 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --testPathIgnorePatterns=src/__tests__/e2e",
     "eject": "react-scripts ej,ect",
-    "cypress:open": "cypress open",
-    "cypress:run": "cypress run --record --key 22f03873-d7be-4dfb-a1b4-c2b8e3e6dda1"
+    "cypress:open": "cypress open --project ./src/__tests__/e2e",
+    "cypress:run": "cypress run --project ./src/__tests__/e2e --record --key 22f03873-d7be-4dfb-a1b4-c2b8e3e6dda1"
   },
   "eslintConfig": {
     "extends": [
