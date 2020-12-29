@@ -13,7 +13,7 @@ Only important here are the unit tests, nothing more.
 - Cypress
 [![react-tdd-redux-practice](https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/detailed/zxx3d7&style=flat&logo=cypress)](https://dashboard.cypress.io/projects/zxx3d7/runs)
 
-![Cypress](https://cypress-io.ghost.io/blog/content/images/2019/05/auto-wait.gif)
+![Cypress](https://firebasestorage.googleapis.com/v0/b/files-service.appspot.com/o/images%2FtaskApp.gif?alt=media&token=67d8fc2e-f14c-4236-a8ba-735b90cb8da0)
 
 ## Integration tests
 ### Components (ui)
@@ -23,11 +23,13 @@ Only important here are the unit tests, nothing more.
 - **When Task list component render** should dispatch the fetch thunk action. :heavy_check_mark:
 - **Task form component should** render without crash. :heavy_check_mark:
 - **Task detail component should** render without crash. :heavy_check_mark:
+
 Interactions
+
 - **should be disabled** the button add when not have text the input of title. :heavy_check_mark:
 - **When writen** text into input text of tittle, this should content the value. :heavy_check_mark:
 - **When clicked** the button what added a new task the input text title should be cleaned. :heavy_check_mark:
-- **When clicked** the button what update should show form for edit and have the value to edit.
+- **When clicked** the button what update should show form for edit and have the value to edit. :heavy_check_mark:
 
 ### Api
 - **Should list** tasks when do get request with axios. :heavy_check_mark:
