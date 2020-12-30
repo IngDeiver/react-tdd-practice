@@ -1,12 +1,9 @@
 import React from "react";
 import { cleanup, render, screen, addTask, store } from "test-utils";
-import TaskFormContainer from "../../../../../../components/task/form/form-container";
+import TaskFormContainer from "../../../../../components/task/form/form-container";
 import userEvent from "@testing-library/user-event";
 import waitForActions, { matchers } from "redux-mock-store-await-actions";
-import axios from "axios";
 
-
-jest.mock("axios");
 afterEach(() => cleanup());
 
 it("should render <TaskFormContainer/>", () => {
@@ -23,7 +20,6 @@ it("When writen** text into input text of tittle task, this should content the v
 
 it("When added a new task should dispatch add task thunk action", async () => {
   render(<TaskFormContainer />);
-  axios.post.mockResolvedValue({data: {}});
   userEvent.type(screen.getByTestId("input-title-task"), "Task added");
   userEvent.click(screen.getByTestId("btn-add-task"));
 

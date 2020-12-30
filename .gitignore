@@ -23,5 +23,5 @@ yarn-debug.log*
 yarn-error.log*
 
 # cypress
-./src/__tests__/e2e/cypress/videos
-./src/__tests__/e2e/cypress/screenshots
+/src/__tests__/e2e/cypress/videos
+/src/__tests__/e2e/cypress/screenshots

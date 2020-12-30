@@ -1,11 +1,6 @@
 import React from "react";
-import { cleanup, render, store, fetchTasks, mockTasks} from 'test-utils'
-import TaskListContainer from "../../../../../../components/task/list/list-container";
-import axios from 'axios';
-
-jest.mock('axios');
-
-//redux
+import { cleanup, render, store, fetchTasks} from 'test-utils'
+import TaskListContainer from "../../../../../components/task/list/list-container";
 
 afterEach(() => {
   cleanup()
@@ -17,8 +12,6 @@ it("should render <TaskDetailContainer/>", () => {
 });
 
 it("When Task list component render** should dispatch the fetch action", () => {
-    const resp = {data: mockTasks};
-    axios.get.mockResolvedValue(resp);
     render(<TaskListContainer />);
     expect(store.getActions().map(action => action.type)).toEqual([fetchTasks.pending.type])
 });

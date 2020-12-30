@@ -15,7 +15,7 @@ import taskReducer from '../../redux/reducers/task.reducer'
 // hooks 
 import useApi from '../../hooks/useApi'
 
-const tasks = [{_id:"id", title:"title"}, {_id:"id2", title:"title2"}]
+const tasks = [{_id:"5fe12780ce70a67dac00e5c4", title:"title"}, {_id:"5fe1289531d2ec7dacb28c14", title:"title2"}]
 const mockStore = configureStore([thunkMiddleware])
 const store = mockStore({tasks})
 

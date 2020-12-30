@@ -50,14 +50,18 @@ Interactions
 - **When call reducer** with action of type remove, should return a tasks array with a task substract. :heavy_check_mark:
 
 ## e2e (end to end with cypress)
+### UI
 - Should list tasks. :heavy_check_mark:
 - Should save a task. :heavy_check_mark:
 - Should updated a task. :heavy_check_mark:
 - Should remove a task. :heavy_check_mark:
 
+## API
+- Should response 200 with get request to server. :heavy_check_mark:
+
 # For to repply  run:
 first clone this repository, then run the next commands:
 > - `npm i`
 > - `npm run test`
-> - `npm run cypress:open or npm run cypress:headless`
+> - `npm run cypress:open or npm run cypress:run`
 > - `npm start`
